@@ -1,15 +1,16 @@
 
-//Tentativo di associazione di ogni dot a immagine corrispondente
-// function immagini(){
-//     return immagini = $('.images img');
-// }
-//
-// function changeImg() {
-//     var activeI = $('.jq-full');
-//     activeI.removeClass('jq-full');
-//     var clickedDot = $(this);
-//     clickedDot.addClass('jq-full');
-// }
+// Tentativo di associazione di ogni dot a immagine corrispondente
+
+function changeImg() {
+    var activeI = $('.jq-full');
+    activeI.removeClass('jq-full');
+    var clickedDot = $(this);
+    clickedDot.addClass('jq-full');
+    var arrImg = $('.images img');
+    var imgNumb = clickedDot.data('ind');
+    console.log(imgNumb);
+
+}
 
 
 //funzione in caso di click "avanti"
