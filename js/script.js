@@ -1,14 +1,14 @@
-function changeImg() {
-    var activeI = $('.jq-full');
-    activeI.removeClass('jq-full');
-    $(this).addClass('jq-full');
-}
+// function changeImg() {
+//     var activeI = $('.jq-full');
+//     activeI.removeClass('jq-full');
+//     $(this).addClass('jq-full');
+// }
 
 
 //funzione in caso di click "avanti"
 function nextClick() {
     var activeImg = $('.jq-active');
-
+    var activeDot = $('.jq-full');
     //verifico se sono arrivato all'ultima immagine
     if (activeImg.hasClass('lastImg')) {
 
@@ -16,16 +16,25 @@ function nextClick() {
         var nextImg = $('img.firstImg');
         activeImg.removeClass('jq-active');
         nextImg.addClass('jq-active');
+
+        var nextDot = $('i.firstDot');
+        activeDot.removeClass('jq-full');
+        nextDot.addClass('jq-full');
     }else {
         var nextImg = activeImg.next('img');
         activeImg.removeClass('jq-active');
         nextImg.addClass('jq-active');
+
+        var nextDot = activeDot.next('i');
+        activeDot.removeClass('jq-full');
+        nextDot.addClass('jq-full');
     }
 }
 
 //funzione in caso di click "indietro"
 function previousClick() {
     var activeImg = $('.jq-active');
+    var activeDot = $('.jq-full');
 
     //verifico se sono tornato alla prima immagine
     if (activeImg.hasClass('firstImg')) {
@@ -34,10 +43,18 @@ function previousClick() {
         var prevImg = $('img.lastImg');
         activeImg.removeClass('jq-active');
         prevImg.addClass('jq-active');
+
+        var prevDot = $('i.lastDot');
+        activeDot.removeClass('jq-full');
+        prevDot.addClass('jq-full');
     }else {
         var prevImg = activeImg.prev('img');
         activeImg.removeClass('jq-active');
         prevImg.addClass('jq-active');
+
+        var prevDot = activeDot.prev('i');
+        activeDot.removeClass('jq-full');
+        prevDot.addClass('jq-full');
     }
 }
 
@@ -45,7 +62,7 @@ function previousClick() {
 function init() {
     $('.back').click(previousClick);
     $('.forward').click(nextClick);
-    $('.fa-circle').click(changeImg);
+    // $('.fa-circle').click(changeImg);
 }
 
 //inizializzo la funzione dopo che js ha letto il file document
