@@ -42,9 +42,9 @@
     display: inline-block;
 }
 
-.circles i {
+#circles i {
     color: blue;
-    margin-top: 10px;
+    margin: 10px 5px;
 }
 
 .jq-full{

@@ -1,14 +1,28 @@
 
-// Tentativo di associazione di ogni dot a immagine corrispondente
+// creazione automatica dei pallini in base al numero di Immagini
+function pallini() {
+    var arrImg = $('.images img');
+    console.log(arrImg, arrImg.length);
+    var dotContainer = document.getElementById('circles');
+    for (var i = 0; i < arrImg.length; i++) {
+        if (i == 0) {
+            dotContainer.innerHTML += ( '<i class=" firstDot far fa-circle" data-ind="' + i + '"></i>')
+        }else if (i == (arrImg.length - 1) ) {
+            dotContainer.innerHTML += ( '<i class=" lastDot far fa-circle" data-ind="' + i + '"></i>')
+        }else {
+            dotContainer.innerHTML += ( '<i class=" far fa-circle" data-ind="' + i + '"></i>')
+        }
+    }
+}
 
+
+// Tentativo di associazione di ogni dot a immagine corrispondente
 function changeImg() {
     var activeI = $('.jq-full');
     activeI.removeClass('jq-full');
     var clickedDot = $(this);
     clickedDot.addClass('jq-full');
-    var arrImg = $('.images img');
     var dotNumb = clickedDot.data('ind');
-    var imgNumb = $('[data-num="1"]');
     var activeImg = $('.jq-active');
     activeImg.removeClass('jq-active');
     $('[data-num="' + dotNumb + '"]').addClass('jq-active');
@@ -71,6 +85,7 @@ function previousClick() {
 
 //attivo l'ascolto di "click" sui div contenenti le frecce
 function init() {
+    pallini();
     $('.back').click(previousClick);
     $('.forward').click(nextClick);
     $('.fa-circle').click(changeImg);
