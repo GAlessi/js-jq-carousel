@@ -12,19 +12,23 @@
     height: 100vh;
 }
 
-.row{
+.row, .box{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.row i{
+.box{
+    width: 50%;
+    flex-direction: column;
+}
+.row .back i, .row .forward i{
     font-size: 80px;
     margin: 10px;
 }
 
 .images{
-    width: 50%;
+    width: 100%;
     height: 450px;
 }
 
@@ -36,4 +40,14 @@
 
 .images img.jq-active{
     display: inline-block;
+}
+
+.circles i {
+    color: blue;
+    margin-top: 10px;
+}
+
+.jq-full{
+    border-radius: 100%;
+    background-color: blue;
 }

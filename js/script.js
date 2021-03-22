@@ -1,3 +1,9 @@
+function changeImg() {
+    var activeI = $('.jq-full');
+    activeI.removeClass('jq-full');
+    $(this).addClass('jq-full');
+}
+
 
 //funzione in caso di click "avanti"
 function nextClick() {
@@ -39,6 +45,7 @@ function previousClick() {
 function init() {
     $('.back').click(previousClick);
     $('.forward').click(nextClick);
+    $('.fa-circle').click(changeImg);
 }
 
 //inizializzo la funzione dopo che js ha letto il file document
