@@ -7,8 +7,11 @@ function changeImg() {
     var clickedDot = $(this);
     clickedDot.addClass('jq-full');
     var arrImg = $('.images img');
-    var imgNumb = clickedDot.data('ind');
-    console.log(imgNumb);
+    var dotNumb = clickedDot.data('ind');
+    var imgNumb = $('[data-num="1"]');
+    var activeImg = $('.jq-active');
+    activeImg.removeClass('jq-active');
+    $('[data-num="' + dotNumb + '"]').addClass('jq-active');
 
 }
 
