@@ -1,7 +1,14 @@
+
+//Tentativo di associazione di ogni dot a immagine corrispondente
+// function immagini(){
+//     return immagini = $('.images img');
+// }
+//
 // function changeImg() {
 //     var activeI = $('.jq-full');
 //     activeI.removeClass('jq-full');
-//     $(this).addClass('jq-full');
+//     var clickedDot = $(this);
+//     clickedDot.addClass('jq-full');
 // }
 
 
@@ -62,7 +69,7 @@ function previousClick() {
 function init() {
     $('.back').click(previousClick);
     $('.forward').click(nextClick);
-    // $('.fa-circle').click(changeImg);
+    $('.fa-circle').click(changeImg);
 }
 
 //inizializzo la funzione dopo che js ha letto il file document
