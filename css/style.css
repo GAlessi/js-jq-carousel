@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row i{
+    font-size: 80px;
+    margin: 10px;
+}
+
+.images{
+    width: 50%;
+    height: 450px;
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.images img.active{
+    display: inline-block;
+}
