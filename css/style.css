@@ -34,6 +34,6 @@
     display: none;
 }
 
-.images img.active{
+.images img.jq-active{
     display: inline-block;
 }
